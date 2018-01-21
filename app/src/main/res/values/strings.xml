@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ski Jump</string>
+    <string name="norway">Norway</string>
+    <string name="germany">Germany</string>
+    <string name="points60">60 points</string>
+    <string name="points120">120 points</string>
+    <string name="jumping_style">Jumping style</string>
+</resources>

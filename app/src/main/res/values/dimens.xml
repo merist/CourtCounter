@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="normalText">20sp</dimen>
+    <dimen name="size1">1dp</dimen>
+    <dimen name="size100">100dp</dimen>
+    <dimen name="size150">150dp</dimen>
+</resources>
