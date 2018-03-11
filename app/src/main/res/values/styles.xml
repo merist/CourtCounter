@@ -10,4 +10,42 @@
     <style name="TextColor">
         <item name="android:textColor">#fff</item>
     </style>
+
+    <!--Styles for the increment/decrement buttons-->
+    <style name="buttonStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin8</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <!--Styles for the text of the team's name-->
+    <style name="teamTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/padding4</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/normalText</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Styles for the text of the team's score-->
+    <style name="totalScoreText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/size10</item>
+        <item name="android:padding">@dimen/padding4</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/normalText</item>
+    </style>
+
+    <!--Styles for the text of the team's jumping style text-->
+    <style name="jumpingStyleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/size10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

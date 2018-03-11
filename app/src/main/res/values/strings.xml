@@ -12,5 +12,6 @@
     <string name="result">Ski Jump final result</string>
     <string name="winner">The winner is</string>
     <string name="start_competition">The competition has not started yet</string>
+    <string name="no_winner">Draw game! There is no winner.</string>
 
 </resources>

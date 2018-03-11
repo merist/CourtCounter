@@ -32,82 +32,57 @@
                     tools:context="com.example.android.courtcounter.MainActivity">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:padding="4dp"
-                        android:text="@string/norway"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="@dimen/normalText"
-                        android:textStyle="bold" />
+                        style="@style/teamTextStyle"
+                        android:text="@string/norway" />
 
                     <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="100dp"
+                        android:layout_width="@dimen/size150"
+                        android:layout_height="@dimen/size100"
                         android:layout_gravity="center"
                         android:src="@drawable/no" />
 
                     <TextView
-                        android:id="@+id/team_a_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/size10"
-                        android:padding="4dp"
+                        android:id="@+id/team_no_score"
+                        style="@style/teamTextStyle"
                         android:text="0"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="20sp" />
+                        android:textAlignment="center" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/size10"
+                        style="@style/jumpingStyleText"
                         android:text="@string/jumping_style"
-                        android:textAlignment="center"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorBlack"
-                        android:textStyle="bold" />
+                        android:textAlignment="center" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <Button
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:background="@color/colorPrimary"
-                            android:onClick="addOneForNo"
-                            android:text="+"
-                            android:textColor="@color/colorWhite"></Button>
+                            android:layout_width="@dimen/width80"
+                            style="@style/buttonStyle"
+                            android:textSize="@dimen/normalText"
+                            android:onClick="removeOneForNo"
+                            android:text="-"></Button>
 
                         <Button
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:background="@color/colorPrimary"
-                            android:onClick="removeOneForNo"
-                            android:text="-"
-                            android:textColor="@color/colorWhite"></Button>
+                            android:layout_width="@dimen/width80"
+                            style="@style/buttonStyle"
+                            android:onClick="addOneForNo"
+                            android:textSize="@dimen/normalText"
+                            android:text="+"></Button>
+
                     </LinearLayout>
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:background="@color/colorPrimary"
+                        style="@style/buttonStyle"
                         android:onClick="addSixtyForNo"
-                        android:text="@string/points60"
-                        android:textColor="@color/colorWhite"></Button>
+                        android:text="@string/points60"></Button>
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:background="@color/colorPrimary"
+                        style="@style/buttonStyle"
                         android:onClick="addOneHundredTwentyForNo"
-                        android:text="@string/points120"
-                        android:textColor="@color/colorWhite"></Button>
+                        android:text="@string/points120"></Button>
 
 
                 </LinearLayout>
@@ -128,7 +103,7 @@
                     <TextView
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="80dp"
+                        android:layout_marginBottom="@dimen/width80"
                         android:layout_marginTop="20dp"
                         android:background="@android:color/darker_gray" />
                 </LinearLayout>
@@ -142,82 +117,58 @@
                     tools:context="com.example.android.courtcounter.MainActivity">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:padding="4dp"
-                        android:text="@string/germany"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="@dimen/normalText"
-                        android:textStyle="bold" />
+                        style="@style/teamTextStyle"
+                        android:text="@string/germany" />
 
                     <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="100dp"
+                        android:layout_width="@dimen/size150"
+                        android:layout_height="@dimen/size100"
                         android:layout_gravity="center"
                         android:src="@drawable/de" />
 
                     <TextView
-                        android:id="@+id/team_b_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/size10"
-                        android:padding="4dp"
+                        android:id="@+id/team_de_score"
+                        style="@style/teamTextStyle"
                         android:text="0"
                         android:textAlignment="center"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="20sp" />
+                         />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/size10"
+                        style="@style/jumpingStyleText"
                         android:text="@string/jumping_style"
-                        android:textAlignment="center"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorBlack"
-                        android:textStyle="bold" />
+                        android:textAlignment="center" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <Button
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:background="@color/colorPrimary"
-                            android:onClick="addOneForDe"
-                            android:text="+"
-                            android:textColor="@color/colorWhite"></Button>
+                            android:layout_width="@dimen/width80"
+                            style="@style/buttonStyle"
+                            android:onClick="removeOneForDe"
+                            android:textSize="@dimen/normalText"
+                            android:text="-"></Button>
 
                         <Button
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:background="@color/colorPrimary"
-                            android:onClick="removeOneForDe"
-                            android:text="-"
-                            android:textColor="@color/colorWhite"></Button>
+                            android:layout_width="@dimen/width80"
+                            style="@style/buttonStyle"
+                            android:onClick="addOneForDe"
+                            android:textSize="@dimen/normalText"
+                            android:text="+"></Button>
+
                     </LinearLayout>
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:background="@color/colorPrimary"
+                        style="@style/buttonStyle"
                         android:onClick="addSixtyForDe"
-                        android:text="@string/points60"
-                        android:textColor="@color/colorWhite"></Button>
+                        android:text="@string/points60"></Button>
 
                     <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:background="@color/colorPrimary"
+                        style="@style/buttonStyle"
                         android:onClick="addOneHundredTwentyForDe"
-                        android:text="@string/points120"
-                        android:textColor="@color/colorWhite"></Button>
+                        android:text="@string/points120"></Button>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
@@ -246,7 +197,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
             android:layout_margin="@dimen/size10"
             android:background="@color/colorGreen"
             android:onClick="displayResult"
