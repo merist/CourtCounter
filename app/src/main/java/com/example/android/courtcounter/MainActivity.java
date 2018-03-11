@@ -21,9 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
     /*
      * This method displays the score for Norway
+     * @param score
      */
     public void displayForTeamNo(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = (TextView) findViewById(R.id.team_no_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     * This method displays the score for Germany
     */
     public void displayForTeamDe(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreView = (TextView) findViewById(R.id.team_de_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -51,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void removeOneForNo(View view) {
-        scoreTeamNo -= 1;
+        if(scoreTeamNo > 0){
+            scoreTeamNo -= 1;
+        }
         displayForTeamNo(scoreTeamNo);
     }
 
@@ -71,12 +74,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void removeOneForDe(View view) {
-        scoreTeamDe -= 1;
+        if(scoreTeamDe > 0){
+            scoreTeamDe -= 1;
+        }
         displayForTeamDe(scoreTeamDe);
     }
 
     /*
-     * Reset score for team A and B to 0.
+     * Reset score for team Norway and Germany to 0.
      */
     public void resetScore(View view) {
         scoreTeamDe = 0;
@@ -92,11 +97,19 @@ public class MainActivity extends AppCompatActivity {
      */
     public void displayResult(View view) {
         String winnerTeam = "";
+        String winnerAnnouncement = getText(R.string.winner).toString();
 
-        if (scoreTeamDe > scoreTeamNo) {
-            winnerTeam = getText(R.string.germany).toString();
-        } else if (scoreTeamDe < scoreTeamNo) {
-            winnerTeam = getText(R.string.norway).toString();
+        if (scoreTeamDe > scoreTeamNo)
+        {
+            winnerTeam = winnerAnnouncement + " " +getText(R.string.germany).toString();
+        }
+        else if (scoreTeamDe < scoreTeamNo)
+        {
+            winnerTeam = winnerAnnouncement + " " + getText(R.string.norway).toString();
+        }
+        else // There is no winner - draw score
+        {
+            winnerTeam = getText(R.string.no_winner).toString();
         }
         // Check if the game has started (if not display a message)
         if (scoreTeamDe == 0 && scoreTeamNo == 0) {
@@ -116,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Light_Dialog_Alert);
         alertDialogBuilder.setTitle(getText(R.string.result));
-        alertDialogBuilder.setMessage(getText(R.string.winner) + " " + winnerTeam);
+        alertDialogBuilder.setMessage(winnerTeam);
         // Add cancel button to return in the main activity
         alertDialogBuilder.setNegativeButton(getText(R.string.cancel), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
